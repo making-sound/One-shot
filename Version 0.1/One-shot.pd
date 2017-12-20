@@ -75,7 +75,7 @@
 #X obj 44 256 outlet;
 #X obj 99 70 t f f;
 #X obj 103 99 !=;
-#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 120 124 same note twice;
 #X obj 38 213 spigot;
@@ -667,4 +667,6 @@
 #X obj 57 119 tgl 15 0 ready_tog ready_tog_set empty 17 7 0 12 -262144
 -1 -1 1 1;
 #X text 74 117 Ready;
+#X text 0 46 --------------------------;
+#X text 1 185 --------------------------;
 #X connect 0 0 1 0;
