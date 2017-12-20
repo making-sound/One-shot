@@ -63,9 +63,15 @@ voice_stealing 0
 - Outputs to audio outputs 1 and 2.
 - Mono files are duplicated to outputs 1 and 2.
 
-### To do
+### To Do
 
 - Load buffers sequentially and display error message if a problem is encountered.
 - Turn on DSP when buffers have loaded successfully.
 - Error messages if keymap.txt or settings.txt have not loaded successfuly.
 - Make visually presentable.
+
+### Wish List
+
+- Allow computer QWERTY keyboard to trigger samples. Will require a new setting in settings.txt to select either MIDI or QWERTY input.
+- Adjustable polyphony
+- Master volume setting?
