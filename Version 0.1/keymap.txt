@@ -1,0 +1,5 @@
+60 pings1.aiff
+62 pings2.aiff
+64 pings3.aiff
+65 pings4.aiff
+67 stereo_a.wav

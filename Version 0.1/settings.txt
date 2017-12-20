@@ -1,0 +1,7 @@
+all_off_key 59
+fade_dur 250
+midi_channel 0
+velocity_sensitive 0
+debounce 0
+same_key_twice 1
+voice_stealing 0
