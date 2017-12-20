@@ -16,7 +16,7 @@ One-shot runs on a Raspberry Pi. More info coming soon.
 
 After downloading and unzipping:
 
-1. Place samples in "samples" folder.
+1. Place samples in "samples" folder (no spaces in sample file names).
 2. Map MIDI notes to specific samples in the "keymap.txt" file.
 3. Adjust options in "settings.txt" file.
 4. Load Pd and setup audio and MIDI (Media menu -> "Audio Settings...", Media menu -> "MIDI settings...") and confirm audio and MIDI works (Media menu -> "Test Audio and MIDI...").
@@ -28,7 +28,7 @@ If you update "keymap.txt" or "settings.txt", reload the patch for the changes t
 
 keymap.txt defines the mapping between MIDI notes and samples.
 
-Each line has two elements separated by a space: MIDI note number and sample file name. The sample file name must be contained within quote marks if there is a space in it (e.g. "file name.wav"). The sample file will be played when the corresponding note number is received.
+Each line has two elements separated by a space: MIDI note number and sample file name. The sample file name must not include any spaces. The sample file will be played when the corresponding note number is received.
 
 ### settings.txt
 
@@ -66,9 +66,9 @@ voice_stealing 0
 ### To Do
 
 - Load buffers sequentially and display error message if a problem is encountered.
-- Turn on DSP when buffers have loaded successfully.
 - Error messages if keymap.txt or settings.txt have not loaded successfuly.
-- Make visually presentable.
+- Use readsf~ instead of tabread4~ to avoid large array indexing artifacts?
+- Load duplicate sound files only once.
 
 ### Wish List
 
