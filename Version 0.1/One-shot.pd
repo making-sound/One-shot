@@ -3,14 +3,13 @@
 #X floatatom 20 150 5 0 0 0 - num_voices -, f 5;
 #X obj 23 171 hsl 128 15 0 36 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 71 83 0 0 0 0 - - -;
-#X obj 25 55 notein, f 12;
-#X floatatom 25 83 0 0 0 0 - - -;
-#X floatatom 118 83 0 0 0 0 - - -;
+#X floatatom 71 68 0 0 0 0 - velocity_set velocity;
+#X floatatom 25 68 0 0 0 0 - pitch_set pitch;
+#X floatatom 118 68 0 0 0 0 - channel_set channel;
 #X obj 175 69 vu 15 120 mtr_l empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 194 69 vu 15 120 mtr_r empty -1 -8 0 10 -66577 -1 0 0;
 #X text 23 27 www.making-sound.co.uk;
-#N canvas 600 88 430 545 workings 0;
+#N canvas 600 88 502 545 workings 0;
 #X obj 209 176 text define keymap;
 #X obj 187 186 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -76,13 +75,13 @@
 #X obj 44 256 outlet;
 #X obj 99 70 t f f;
 #X obj 103 99 !=;
-#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 120 124 same note twice;
 #X obj 38 213 spigot;
 #X obj 266 100 r same_key_twice;
 #X obj 113 159 ||;
-#X obj 113 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 113 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 267 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -631,6 +630,10 @@
 -1;
 #X obj 124 120 t b b b b b;
 #X msg 15 181 \; pd dsp 1 \; ready_tog_set 1;
+#X obj 324 20 notein;
+#X obj 324 98 s pitch_set;
+#X obj 346 72 s velocity_set;
+#X obj 369 47 s channel_set;
 #X connect 1 0 15 0;
 #X connect 2 0 0 0;
 #X connect 3 0 20 0;
@@ -650,18 +653,18 @@
 #X connect 20 2 8 0;
 #X connect 20 3 1 0;
 #X connect 20 4 2 0;
+#X connect 22 0 23 0;
+#X connect 22 1 24 0;
+#X connect 22 2 25 0;
 #X restore 17 205 pd workings;
 #N canvas 306 98 541 300 help 0;
 #X restore 120 205 pd help;
-#X text 18 102 pitch;
-#X text 70 103 vel;
-#X text 105 103 channel;
+#X text 18 87 pitch;
+#X text 70 88 vel;
+#X text 105 88 channel;
 #X text 65 7 One-shot 0.1;
 #X text 63 148 active voices;
-#X obj 21 127 tgl 15 0 ready_tog ready_tog_set empty 17 7 0 12 -262144
+#X obj 57 119 tgl 15 0 ready_tog ready_tog_set empty 17 7 0 12 -262144
 -1 -1 1 1;
-#X text 38 125 Ready;
+#X text 74 117 Ready;
 #X connect 0 0 1 0;
-#X connect 3 0 4 0;
-#X connect 3 1 2 0;
-#X connect 3 2 5 0;

@@ -2,9 +2,9 @@
 
 **Version 0.1. Still in development. Use at your own risk.**
 
-A simple one-shot sampler to trigger samples from a MIDI keyboard. It is a Puredata (Pd) patch so it will run on Mac, Windows and Linux. Useful for triggering a bunch of sound effects from a MIDI keyboard, amongst other things. Includes safety features such as adjusable debounce and new pitches only to prevent accidental double-triggering, and also all notes off/fade out.
+A simple one-shot sample player triggered by a MIDI notes. It is a Puredata (Pd) patch so it will run on Mac, Windows and Linux. Useful for triggering a bunch of sound effects from a MIDI keyboard, amongst other things. Includes safety features such as adjustable debounce and new pitches only to prevent accidental double-triggering, and also all notes off/fade out.
 
-One-shot runs on a Raspberry Pi. More info coming soon.
+One-shot also runs on a Raspberry Pi. More info coming soon.
 
 ### Requirements
 
@@ -21,6 +21,7 @@ After downloading and unzipping:
 3. Adjust options in "settings.txt" file.
 4. Load Pd and setup audio and MIDI (Media menu -> "Audio Settings...", Media menu -> "MIDI settings...") and confirm audio and MIDI works (Media menu -> "Test Audio and MIDI...").
 5. Load patch.
+6. Check the Pd window for error messages.
 
 If you update "keymap.txt" or "settings.txt", reload the patch for the changes to take effect.
 
@@ -57,6 +58,7 @@ voice_stealing 0
 
 ### Notes
 
+- Long samples may take time to load after the patch is run. Wait for the "Ready" toggle to be ticked.
 - Polyphony is fixed at 24 voices.
 - Up to 88 stereo samples may be used.
 - Incoming notes are ignored for the "fade_out" duration after an "all notes off" has been triggered.
