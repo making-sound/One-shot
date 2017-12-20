@@ -30,7 +30,7 @@ Each line has two elements separated by a space: MIDI note number and sample fil
 
 Each line contains a setting name and a setting value separated by a space.
 
-Examples settings.txt file contents:
+Example settings.txt file contents:
 ```
 all_off_key 59
 fade_dur 250
@@ -42,7 +42,7 @@ voice_stealing 0
 ```
 
 | Setting | Value | Description |
-| - | - |
+| - | - | - |
 | `all_off_key` | Note number | All notes are faded out in `fade_dur` duration (see below) when this note is received. |
 | `fade_dur` | Duration in milliseconds | Fade out time after all_off_key has been received. |
 | `midi_channel` | MIDI channel number 0 - 16 | Channel 1 to 16 or 0 = all channels received. |
