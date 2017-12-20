@@ -14,6 +14,8 @@ One-shot runs on a Raspberry Pi. More info coming soon.
 
 ### Instructions
 
+After downloading and unzipping:
+
 1. Place samples in "samples" folder.
 2. Map MIDI notes to specific samples in the "keymap.txt" file.
 3. Adjust options in "settings.txt" file.
