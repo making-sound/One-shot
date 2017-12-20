@@ -1,4 +1,4 @@
-#N canvas 437 172 230 234 12;
+#N canvas 395 258 230 234 12;
 #X declare -path samples -path lib;
 #X floatatom 20 150 5 0 0 0 - num_voices -, f 5;
 #X obj 23 171 hsl 128 15 0 36 0 0 empty empty empty -2 -8 0 10 -262144
@@ -75,7 +75,7 @@
 #X obj 44 256 outlet;
 #X obj 99 70 t f f;
 #X obj 103 99 !=;
-#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 120 124 same note twice;
 #X obj 38 213 spigot;
@@ -409,8 +409,8 @@
 #X connect 31 0 30 1;
 #X connect 32 0 33 0;
 #X restore 121 330 pd voice_allocation;
-#X obj 121 422 dac~ 1 2;
-#X obj 64 461 clone buffers 88;
+#X obj 121 426 dac~ 1 2;
+#X obj 64 473 clone buffers 88;
 #X obj 166 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 0 23 450 300 create_key_line_map 0;
@@ -499,7 +499,7 @@
 #X connect 15 1 13 1;
 #X restore 145 261 pd settings;
 #X obj 121 360 clone oneshotsampler 24;
-#X obj 64 486 declare -path samples -path lib;
+#X obj 64 498 declare -path samples -path lib;
 #X obj 124 28 loadbang;
 #N canvas 251 45 915 688 get_info_load_buffers 0;
 #X obj 280 45 text size keymap;

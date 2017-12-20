@@ -77,3 +77,4 @@ voice_stealing 0
 - Allow computer QWERTY keyboard to trigger samples. Will require a new setting in settings.txt to select either MIDI or QWERTY input.
 - Adjustable polyphony
 - Master volume setting?
+- Program change folders (a keymap.txt and sample folder for each program change message received)?
