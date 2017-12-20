@@ -2,15 +2,15 @@
 
 **Version 0.1. Still in development. Use at your own risk.**
 
-A simple one-shot sampler to trigger samples from a MIDI keyboard. It is a Puredata patch.
+A simple one-shot sampler to trigger samples from a MIDI keyboard. It is a Puredata (Pd) patch so it will run on Mac, Windows and Linux.
 
 One-shot runs on a Raspberry Pi. More info coming soon.
 
 ### Requirements
 
-- Puredata Vanilla 0.48.0.
+- [Pd 0.48-0](http://msp.ucsd.edu/software.html) (untested on earlier versions, but may still work)
 - MIDI keyboard
-- Computer with stereo audio output.
+- Computer with stereo audio output
 
 ### Instructions
 
@@ -19,6 +19,8 @@ One-shot runs on a Raspberry Pi. More info coming soon.
 3. Adjust options in "settings.txt" file.
 4. Load Pd and setup audio and MIDI (Media menu -> "Audio Settings...", Media menu -> "MIDI settings...") and confirm audio and MIDI works (Media menu -> "Test Audio and MIDI...").
 5. Load patch.
+
+If you update "keymap.txt" or "settings.txt", reload the patch for the changes to take effect.
 
 ### keymap.txt
 
