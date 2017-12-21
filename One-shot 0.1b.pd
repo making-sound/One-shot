@@ -1,4 +1,4 @@
-#N canvas 181 285 245 237 12;
+#N canvas 279 212 245 237 12;
 #X declare -path samples -path lib;
 #X floatatom 22 150 5 0 0 0 - #0_num_voices -, f 5;
 #X obj 25 170 hsl 128 15 0 36 0 0 empty \$0_num_voices empty -2 -8
@@ -9,7 +9,23 @@
 #X obj 179 67 vu 15 120 mtr_l empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 196 67 vu 15 120 mtr_r empty -1 -8 0 10 -66577 -1 0 0;
 #X text 33 27 www.making-sound.co.uk;
-#N canvas 306 98 541 300 help 0;
+#N canvas 306 98 541 485 help 0;
+#X text 35 303 For updates \, please visit the [One-shot GitHub page](https://github.com/making-sound/One-shot).
+;
+#X text 33 364 For further instructions \, please visit the [One-shot
+wiki page](https://github.com/making-sound/One-shot/wiki)., f 58;
+#X text 35 425 Made by [making-sound.co.uk](http://www.making-sound.co.uk).
+;
+#X text 33 30 1 Place samples in "samples" folder (no spaces in sample
+file names) \; 2 Map MIDI notes to specific samples in the "keymap.txt"
+file \; 3 Adjust options in "settings.txt" file \; 4 Load Pd and setup
+audio and MIDI ("Media" menu -> "Audio Settings..." \, "Media" menu
+-> "MIDI Settings...") \, and confirm audio and MIDI works ("Media"
+menu -> "Test Audio and MIDI...") \; 5 Open patch (file called `One-shot
+x.x.pd`) in Pd (File menu -> "Open") \; 6 The "Ready" toggle box will
+become ticked when everything has loaded okay. If it doesn't (it may
+take a while if you have several long samples) \, check the Pd window
+for error messages ("Window" menu -> "Pd").;
 #X restore 130 209 pd help;
 #X text 16 87 pitch;
 #X text 73 88 vel;
@@ -79,7 +95,7 @@
 #X obj 44 256 outlet;
 #X obj 99 70 t f f;
 #X obj 103 99 !=;
-#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 120 124 same note twice;
 #X obj 38 213 spigot;
