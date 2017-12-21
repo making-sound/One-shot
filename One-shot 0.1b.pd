@@ -1,4 +1,4 @@
-#N canvas 601 146 245 237 12;
+#N canvas 181 285 245 237 12;
 #X declare -path samples -path lib;
 #X floatatom 22 150 5 0 0 0 - #0_num_voices -, f 5;
 #X obj 25 170 hsl 128 15 0 36 0 0 empty \$0_num_voices empty -2 -8
