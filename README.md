@@ -6,7 +6,7 @@ A free, minimalist one-shot sample player triggered by MIDI notes. It is a [Pure
 
 > The sampling term "one-shot" is applied to a sample that once triggered by a note-on MIDI message will play through to its end, ignoring the note-off MIDI message that normally follows the note-on message. This is useful for sound effects and percussive samples that have a set duration and play back at the original sample pitch.
 
-Samples are stored in a folder named `samples`. They are mapped in a text file called `keymap.txt` and settings are stored in `settings.txt`. Since One-shot is configured using only text files, the GUI is not required. In fact, this makes it rather well suited to running on a single-board screen-less computer such as a Raspberry Pi. More info on this coming soon.
+Samples are stored in a folder named `samples`. They are mapped in a text file called `keymap.txt` and settings are stored in `settings.txt`. Since One-shot is configured using only text files, the GUI is not required. In fact, this makes it rather well suited to running on a single-board screen-less computer such as a Raspberry Pi, although at the time of writing (Dec 2017), only Pd 0.47, not 0.48, is available for the Raspberry Pi. One-shot requires Pd 0.48 (it uses the second outlet of the [soundfiler] object to determin sound file channel count - this is not available in Pd 0.47). This will be resolved sound with an update to One-shot.
 
 One-key preloads samples into RAM on startup for responsive triggering.
 
@@ -14,7 +14,7 @@ One-key preloads samples into RAM on startup for responsive triggering.
 
 - [Pd 0.48-0](http://msp.ucsd.edu/software.html) (untested on earlier versions, but may still work)
 - MIDI keyboard
-- Computer with a stereo audio output (even works on a Raspberry Pi)
+- Computer with a stereo audio output
 
 ### Instructions
 
@@ -85,7 +85,6 @@ voice_stealing 0
 - Use readsf~ instead of tabread4~ to avoid large array indexing artifacts?
 - Load duplicate sound files only once.
 - Print progress messages to the Pd window to inform user of patch status when running it remotely from the command line.
-- Add shell script to start the patch with correct audio/MIDI settings on a Raspberry Pi.
 
 ### Wish List
 
