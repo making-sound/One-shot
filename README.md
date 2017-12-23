@@ -2,8 +2,6 @@
 
 ### What is One-shot?
 
-[[img/One-shot-0.1b-screenshot.png|align=center|width=337px|height=350px]]
-
 A free, minimalist one-shot sample player triggered by MIDI notes. It is a [Puredata (Pd)](http://www.puredata.info) patch so it will run on Mac, Windows and Linux. Useful for triggering a folder of sound effects from a MIDI keyboard, amongst other things. Includes safety features such as adjustable debounce and "all notes off".
 
 > The sampling term "one-shot" is applied to a sample that once triggered by a note-on MIDI message will play through to its end, ignoring the note-off MIDI message that normally follows the note-on message. This is useful for sound effects and percussive samples that have a set duration and play back at the original sample pitch.
