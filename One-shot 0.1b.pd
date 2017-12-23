@@ -73,13 +73,13 @@ for error messages ("Window" menu -> "Pd").;
 #X connect 10 0 11 0;
 #X connect 10 1 12 0;
 #X restore 26 115 pd test_channel;
-#N canvas 0 23 450 300 test_for_all_off_key 0;
-#X obj 106 81 r all_off_key;
-#X floatatom 106 106 5 0 0 0 - - -, f 5;
-#X obj 69 130 sel 0;
-#X obj 69 157 s all_off;
+#N canvas 286 191 252 257 test_for_all_off_key 0;
+#X obj 109 61 r all_off_key;
+#X floatatom 109 86 5 0 0 0 - - -, f 5;
+#X obj 72 110 sel 0;
+#X obj 72 137 s all_off;
 #X obj 35 46 inlet;
-#X obj 38 74 t f f;
+#X obj 35 74 t f f;
 #X obj 33 188 outlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 1;
@@ -92,18 +92,18 @@ for error messages ("Window" menu -> "Pd").;
 #X text 207 340 velocity;
 #N canvas 144 220 450 300 same_key_twice_in_a_row 0;
 #X obj 35 16 inlet;
-#X obj 44 256 outlet;
-#X obj 99 70 t f f;
-#X obj 103 99 !=;
-#X obj 103 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 38 256 outlet;
+#X obj 83 70 t f f;
+#X obj 83 98 !=;
+#X obj 83 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 120 124 same note twice;
+#X text 104 124 same note twice;
 #X obj 38 213 spigot;
-#X obj 266 100 r same_key_twice;
-#X obj 113 159 ||;
-#X obj 113 187 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 250 87 r same_key_twice;
+#X obj 83 149 ||;
+#X obj 83 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 267 147 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 250 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
@@ -119,7 +119,7 @@ for error messages ("Window" menu -> "Pd").;
 #X restore 26 231 pd same_key_twice_in_a_row;
 #N canvas 285 68 448 400 debounce 0;
 #X obj 38 41 inlet;
-#X obj 39 339 outlet;
+#X obj 38 339 outlet;
 #N canvas 0 23 450 300 ignore 0;
 #X obj 42 52 inlet;
 #X obj 41 224 outlet;
@@ -146,18 +146,18 @@ for error messages ("Window" menu -> "Pd").;
 #X connect 7 0 6 1;
 #X connect 11 0 13 0;
 #X connect 13 0 5 0;
-#X restore 42 238 pd ignore;
-#X floatatom 264 214 5 0 0 0 - - -, f 5;
-#X obj 41 208 t b f;
-#X obj 41 267 f;
-#X obj 265 183 r debounce;
-#X obj 149 191 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 38 238 pd ignore;
+#X floatatom 264 221 5 0 0 0 - - -, f 5;
+#X obj 38 168 t b f;
+#X obj 38 267 f;
+#X obj 265 190 r debounce;
+#X obj 109 191 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 163 188 reset;
-#X obj 146 109 t f f;
-#X obj 149 139 != 0;
-#X obj 149 164 sel 1;
-#X obj 42 73 t f f;
+#X text 123 188 reset;
+#X obj 106 109 t f f;
+#X obj 109 139 != 0;
+#X obj 109 164 sel 1;
+#X obj 38 73 t f f;
 #X text 133 32 ignore consecutive same notes within debounce duration
 (ms), f 31;
 #X connect 0 0 12 0;
@@ -210,7 +210,7 @@ for error messages ("Window" menu -> "Pd").;
 #X obj 38 146 spigot 1;
 #X msg 118 101 0;
 #X msg 178 100 1;
-#X obj 118 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 118 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 38 13 buf id \, length \, vel \, channels;
 #X text 37 297 voice \, buf id \, length \, vel \, channels;
@@ -552,7 +552,7 @@ for error messages ("Window" menu -> "Pd").;
 #X obj 60 44 t l l;
 #X text 172 491 id \, pitch \, file name \, size \, num channels;
 #X obj 60 515 outlet;
-#X obj 129 340 f;
+#X obj 129 320 f;
 #X obj 227 329 t b f;
 #X connect 0 0 21 0;
 #X connect 1 0 24 1;
@@ -848,6 +848,8 @@ for error messages ("Window" menu -> "Pd").;
 #X msg 44 295 \; pd dsp 1 \; ready_tog_set 1;
 #X msg 135 38 \; ready_tog_set 0;
 #X obj 135 10 r \$0-reload;
+#X msg 184 295 Ready;
+#X obj 184 320 print;
 #X connect 0 0 14 0;
 #X connect 1 0 18 0;
 #X connect 2 0 3 0;
@@ -868,8 +870,10 @@ for error messages ("Window" menu -> "Pd").;
 #X connect 20 0 6 0;
 #X connect 21 0 22 0;
 #X connect 22 0 24 0;
+#X connect 22 0 27 0;
 #X connect 26 0 1 0;
 #X connect 26 0 25 0;
+#X connect 27 0 28 0;
 #X restore 42 209 pd guts;
 #X text 70 7 One-shot 0.1b;
 #X obj 99 118 bng 15 250 50 0 \$0-reload \$0-reload-set empty 17 7

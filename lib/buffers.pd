@@ -1,6 +1,6 @@
 #N canvas 0 23 450 300 12;
-#X obj 108 116 array define buf\$1_l 1;
-#X obj 108 148 array define buf\$1_r 1;
+#X obj 131 116 array define buf\$1_l 1;
+#X obj 131 148 array define buf\$1_r 1;
 #X obj 103 38 r clear_bufs;
 #X obj 103 63 b;
 #X msg 103 88 const 0;
