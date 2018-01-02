@@ -1,4 +1,4 @@
-#N canvas 279 212 245 237 12;
+#N canvas 412 408 245 237 12;
 #X declare -path samples -path lib;
 #X floatatom 22 150 5 0 0 0 - #0_num_voices -, f 5;
 #X obj 25 170 hsl 128 15 0 36 0 0 empty \$0_num_voices empty -2 -8
@@ -695,7 +695,7 @@ for error messages ("Window" menu -> "Pd").;
 #X obj 76 167 f;
 #X obj 108 166 + 1;
 #X msg 97 136 0;
-#X obj 75 300 outlet;
+#X obj 76 300 outlet;
 #X obj 76 192 t f f;
 #X obj 12 40 inlet;
 #X obj 182 298 outlet;

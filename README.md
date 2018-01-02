@@ -59,15 +59,15 @@ same_key_twice 1
 voice_stealing 0
 ```
 
-| Setting | Value | Description |
-| - | - | - |
-| `all_off_key` | Note number | All notes are faded out in `fade_dur` duration (see below) when this note is received. |
-| `fade_dur` | Duration in milliseconds | Fade out time after all_off_key has been received. |
-| `midi_channel` | MIDI channel number 0 - 16 | Channel 1 to 16 or 0 = all channels received. |
-| `velocity_sensitive` | 1 = yes, 0 = no | Enable/disable velocity sensitivity. |
-| `debounce` | Debounce duration in milliseconds | Avoid double-triggers within debounce duration, 0 = debounce off. |
-| `same_key_twice` | 1 = yes, 0 = no | Allow/disallow the same key to trigger its sample twice in succession. |
-| `voice_stealing` | 1 = on, 0 = off | If all voices are busy, allow/disallow new MIDI notes to steal voices.
+| Setting              | Value                             | Description                                                                            |
+|----------------------|-----------------------------------|----------------------------------------------------------------------------------------|
+| `all_off_key`        | Note number                       | All notes are faded out in `fade_dur` duration (see below) when this note is received. |
+| `fade_dur`           | Duration in milliseconds          | Fade out time after all_off_key has been received.                                     |
+| `midi_channel`       | MIDI channel number 0 - 16        | Channel 1 to 16 or 0 = all channels received.                                          |
+| `velocity_sensitive` | 1 = yes, 0 = no                   | Enable/disable velocity sensitivity.                                                   |
+| `debounce`           | Debounce duration in milliseconds | Avoid double-triggers within debounce duration, 0 = debounce off.                      |
+| `same_key_twice`     | 1 = yes, 0 = no                   | Allow/disallow the same key to trigger its sample twice in succession.                 |
+| `voice_stealing`     | 1 = on, 0 = off                   | If all voices are busy, allow/disallow new MIDI notes to steal voices.                 |
 
 ### Notes
 
@@ -80,7 +80,6 @@ voice_stealing 0
 
 ### To Do
 
-- Load buffers sequentially and display error message if a problem is encountered.
 - Error messages if keymap.txt or settings.txt have not loaded successfuly.
 - Use readsf~ instead of tabread4~ to avoid large array indexing artifacts?
 - Load duplicate sound files only once.
