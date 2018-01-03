@@ -1,4 +1,4 @@
-#N canvas 412 408 245 237 12;
+#N canvas 492 249 245 237 12;
 #X declare -path samples -path lib;
 #X floatatom 22 150 5 0 0 0 - #0_num_voices -, f 5;
 #X obj 25 170 hsl 128 15 0 36 0 0 empty \$0_num_voices empty -2 -8
@@ -26,7 +26,7 @@ x.x.pd`) in Pd (File menu -> "Open") \; 6 The "Ready" toggle box will
 become ticked when everything has loaded okay. If it doesn't (it may
 take a while if you have several long samples) \, check the Pd window
 for error messages ("Window" menu -> "Pd").;
-#X restore 130 209 pd help;
+#X restore 83 209 pd help;
 #X text 16 87 pitch;
 #X text 73 88 vel;
 #X text 109 88 channel;
@@ -874,8 +874,20 @@ for error messages ("Window" menu -> "Pd").;
 #X connect 26 0 1 0;
 #X connect 26 0 25 0;
 #X connect 27 0 28 0;
-#X restore 42 209 pd guts;
+#X restore 18 209 pd guts;
 #X text 70 7 One-shot 0.1b;
 #X obj 99 118 bng 15 250 50 0 \$0-reload \$0-reload-set empty 17 7
 0 10 -262144 -1 -1;
 #X text 116 116 Reload;
+#N canvas 299 176 720 315 legal 0;
+#X text 29 33 Copyright 2017 \, 2018 Jonathan Green \; \; This program
+is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation \, either version 3 of the License \, or (at your option)
+any later version. \; \; This program is distributed in the hope that
+it will be useful \, but WITHOUT ANY WARRANTY \, without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See
+the GNU General Public License for more details. \; \; You should have
+received a copy of the GNU General Public License along with this program.
+If not \, see <http://www.gnu.org/licenses/>., f 80;
+#X restore 148 209 pd legal;
